@@ -13,7 +13,6 @@ function UserSyncExample() {
 
   // This effect runs whenever isAuthenticated or user changes
   useEffect(() => {
-    console.log(user)
     const upsertUserInDatabase = async () => {
       // Only attempt if the user is logged in
       if (!isAuthenticated || !user) return;
@@ -22,7 +21,6 @@ function UserSyncExample() {
         // OPTIONAL: If your backend is secured with Auth0 access tokens:
         const token = await getAccessTokenSilently();
 
-console.log(token)
 
         await fetch('https://budgettracker0.onrender.com/users/', {
           method: 'POST',
