@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
-import Dashboard from './Dashboard';
+import BudgetDashboard from './BudgetDashboard';
+import AppBar from './AppBar'
 
 function Home() {
   const {
@@ -50,6 +51,7 @@ function Home() {
 
   return (
     <div>
+    <AppBar></AppBar>
       <h1>My Budget Tracker</h1>
 
       {/* If not logged in, show login button */}
@@ -64,7 +66,7 @@ function Home() {
           Log Out
           </button>
         <p>You are logged in!</p>
-        <Dashboard/>
+        <BudgetDashboard/>
         </>)}
     </div>
   );
