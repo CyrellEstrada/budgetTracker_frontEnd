@@ -9,9 +9,10 @@ import {
     TableHead,
     TableRow,
     Paper,
-    Tab
+    Tab,
+    Box
 } from '@mui/material'
-import BasicModal from './Modal'
+import BasicModal from './AddButton'
 
 
 const BudgetDashboard = () => {
@@ -48,7 +49,7 @@ const BudgetDashboard = () => {
         // GET request for user's budget using getAllBudgetsbyUserId or getBudgetById in router backend, use endpoint in router not functions in controllers
         
         //Information that come from GET request save in a variable or state, use MUI element or table, goes in return statment below
-        <>
+        <Box sx={{display: 'flex'}}>
         <h1>Welcome to your Dashboard</h1>
                 {/* HTML Form to enter information or MUI Form*/}
         <TableContainer component={Paper} sx={{maxWidth: 600, margin: 'auto', mt: 4}}>
@@ -61,8 +62,8 @@ const BudgetDashboard = () => {
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                <TableRow sx={{textAlign:'right'}}>
-                    <TableCell >{<BasicModal />}</TableCell>
+                <TableRow >
+                    <TableCell sx={{textAlign:'left'}}>{<BasicModal />}</TableCell>
                 </TableRow>
                     {budgets.map((budget) => (
                         <TableRow key={budget.id}>
@@ -74,7 +75,8 @@ const BudgetDashboard = () => {
                 </TableBody>
             </Table>
         </TableContainer>
-</>
+        <BasicModal sx={{alignContent:'left'}}/>
+        </Box>
     )
 }
 
