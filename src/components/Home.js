@@ -53,21 +53,7 @@ function Home() {
     <div>
     <AppBar></AppBar>
       <h1>My Budget Tracker</h1>
-
-      {/* If not logged in, show login button */}
-      {!isAuthenticated && (
-        <button onClick={() => loginWithRedirect()}>Log In</button>
-      )}
-
-      {/* If logged in, show a simple message (user sync runs in the background) */}
-      {isAuthenticated && (
-        <>
-        <button onClick={() => logout({ returnTo: window.location.origin})}>
-          Log Out
-          </button>
-        <p>You are logged in!</p>
         <BudgetDashboard/>
-        </>)}
     </div>
   );
 }
