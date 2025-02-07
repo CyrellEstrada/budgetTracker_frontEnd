@@ -86,7 +86,7 @@ export default function BasicModal() {
       />
       <Button
       onClick={handleSubmit}
-      >Test</Button>
+      >Submit</Button>
         </Box>
       </Modal>
     </div>
