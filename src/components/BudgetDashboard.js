@@ -82,7 +82,6 @@ const BudgetDashboard = () => {
           </TableBody>
         </Table>
       </TableContainer>
-      <BasicModal sx={{ alignContent: "left" }} />
     </Box>
   );
 };
