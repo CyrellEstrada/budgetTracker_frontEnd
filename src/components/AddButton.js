@@ -31,7 +31,6 @@ export default function BasicModal() {
     getAccessTokenSilently,
     logout
   } = useAuth0();
-  const token = getAccessTokenSilently();
   // Here we would make a fetch request to my Express API 
   // posting the data of the form to my data endpoint
   const handleSubmit = async () => {
